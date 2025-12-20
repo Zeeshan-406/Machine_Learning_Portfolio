@@ -1,0 +1,35 @@
+# Movie Recommendation System
+This project is a **content-based movie recommendation system** built using Python, Pandas, and Scikit-learn.  
+It recommends movies similar to a given movie based on textual features such as genres, keywords, and tags.
+---
+## Features
+- Preprocessing of movie dataset (title, genre, language, overview, popularity, release date, vote stats).
+- Text vectorization using **CountVectorizer** (bag-of-words model).
+- Similarity calculation using **Cosine Similarity**.
+- Recommendation function that suggests the **top 5 most similar movies** to any input movie.
+---
+## Tech Stack
+- **Python 3**
+- **Pandas** for data handling
+- **Scikit-learn** (`CountVectorizer`, `cosine_similarity`)
+- **Google Colab / Jupyter Notebook** for development
+---
+## Dataset
+The dataset contains movie information such as:
+- `title`
+- `genre`
+- `original_language`
+- `overview`
+- `popularity`
+- `release_date`
+- `vote_average`
+- `vote_count`
+You can find similar datasets on [Kaggle](https://www.kaggle.com/datasets/utkarshx27/movies-dataset) or GitHub repositories hosting TMDb-based movie data.
+---
+## 🚀 How It Works
+1. **Vectorization**  
+   Convert movie tags into numerical vectors using `CountVectorizer`:
+   ```python
+   from sklearn.feature_extraction.text import CountVectorizer
+   cv = CountVectorizer(max_features=5000, stop_words='english')
+   vec = cv.fit_transform(new_df['tags'].values.astype('U')).toarray()
