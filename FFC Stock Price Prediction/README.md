@@ -32,6 +32,8 @@ The dataset includes daily prices indexed by date.
 - 20% data used for testing  
 - Data split was done chronologically to prevent data leakage  
 ## Model Architecture
+- Random Forest Regressor (Accuracy was Poor)
+-Prophet (Accuray was Poor)
 The LSTM model consists of:
 - Two LSTM layers (50 neurons each)  
 - Dropout layers to reduce overfitting  
